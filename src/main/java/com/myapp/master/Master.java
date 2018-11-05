@@ -44,6 +44,9 @@ public class Master extends UntypedActor {
             pi += result.getValue();
             nrOfResults += 1;
             if (nrOfResults == nrOfMessages) {
+
+                System.out.println(nrOfResults);
+
                 // Send the result to the listener
                 Duration duration = Duration.create(System.currentTimeMillis() - start, TimeUnit.MILLISECONDS);
                 listener.tell(new PiApproximation(pi, duration), getSelf());
