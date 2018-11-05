@@ -9,7 +9,7 @@ public class Listener extends UntypedActor {
     public void onReceive(Object message) throws Exception {
         if (message instanceof PiApproximation) {
             PiApproximation approximation = (PiApproximation) message;
-            System.out.println(String.format("\n\tMain approximation: \t\t%s\n\tCalculation time: \t%s",
+            System.out.println(String.format("\n\tMain approximation: \t\t%s\n\n\tCalculation time: \t\t\t%s",
                     approximation.getPi(), approximation.getDuration()));
             getContext().system().shutdown();
         } else {

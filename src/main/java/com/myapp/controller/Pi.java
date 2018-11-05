@@ -12,8 +12,6 @@ public class Pi {
         // Create an Akka system
         ActorSystem system = ActorSystem.create("PiSystem");
 
-        System.out.println("nrOfWorkers ================> " + nrOfWorkers);
-
         // create the result listener, which will print the result and shutdown the system
         final ActorRef listener = system.actorOf(new Props(Listener.class), "listener");
 

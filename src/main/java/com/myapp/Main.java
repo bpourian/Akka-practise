@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Pi pi = new Pi();
-        pi.calculate(4, 10000, 10000);
+        pi.calculate(15, 10000, 10000);
 
     }
 }
